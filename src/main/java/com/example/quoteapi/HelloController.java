@@ -13,9 +13,9 @@ import java.util.Map;
 @RestController  //Spring annotation, tells spring
 public class HelloController {
 
-    @RequestMapping
-    public String index() {
-        return "index.html";
+    @GetMapping("/")
+    public Map<String, String> index() {
+        return Map.of("1", "Sky's the limit", "2", "Sup friend");
     }
     //spring annotation, get request to /hello
     //@GetMapping("/hello")
